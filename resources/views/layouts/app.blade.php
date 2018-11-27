@@ -19,6 +19,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/modern-business.css') }}" rel="stylesheet">
     
+    <link href="{{ asset('css/schoolfront.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/school-responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/colors.css') }}" rel="stylesheet">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 </head>
@@ -59,8 +63,8 @@
 
 
 <!-- Bootstrap core JavaScript -->
-<script src="{{ asset('vendor/business/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('vendor/business/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/business/bootstrap/js/jquery.js') }}"></script>
+<script src="{{ asset('vendor/business/bootstrap/js/bootstrap.min.js') }}"></script>
 
 </body>
 

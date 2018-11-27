@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/blog/database/migrations/2018_11_28_072551_create_time_table_table.php</file>
+            <file>file:/var/www/html/blog/database/migrations/2018_11_28_123111_create_notices_table.php</file>
+            <file>file:/var/www/html/blog/database/migrations/2018_11_28_092937_create_academic_sessions_table.php</file>
+            <file>file:/var/www/html/blog/database/migrations/2018_11_28_070852_create_event_table.php</file>
+            <file>file:/var/www/html/blog/database/migrations/2018_11_28_093955_create_academic_enquiry_table.php</file>
+            <file>file:/var/www/html/blog/database/migrations/2018_11_28_122050_create_students_table.php</file>
+        </group>
+    </open-files>
+</project-private>

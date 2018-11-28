@@ -47,7 +47,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="images/SBM-Logo.png" class="cms-icon" alt="{{ config('app.name', 'Laravel') }}">  
+            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -70,7 +72,7 @@
 
                 <!-- Authentication Links -->
                 @if (Auth::guest())
-                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a class="btn btn-primary green" href="{{ route('login') }}">Login</a></li>
                 @else
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }} <b class="caret"></b></a>

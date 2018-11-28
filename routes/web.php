@@ -29,10 +29,27 @@ Route::resource('posts', 'PostController');
 
 Route::resource('master_class', 'MasterClassController');
 
+Route::resource('academic_enquiries', 'AcademicEnquiryController@make');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
+
+Route::get('admission', 'AcademicEnquiryController@make');
+Route::post('admission', ['as'=>'admission.store','uses'=>'AcademicEnquiryController@storefront']);
 
 Route::get('contact-us', 'ContactUSController@contactUS');
-
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+
+
+Route::get('about-us', function () {
+    return view('front/aboutus');
+});
+
+Route::get('events', function () {
+    return view('front/events');
+});
+
+Route::get('galleries', function () {
+    return view('front/galleries');
+});

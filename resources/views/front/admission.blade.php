@@ -23,7 +23,7 @@
             <span class="text-danger">{{ $errors->first('student_name') }}</span>
         </div>
     </div>
-    
+
     <div class="col-lg-4 col-md-4 col-sm-4">
         <div class="form-group {{ $errors->has('student_dob') ? 'has-error' : '' }}">
             {!! Form::label('Birth-Date:') !!}
@@ -31,12 +31,21 @@
             <span class="text-danger">{{ $errors->first('student_dob') }}</span>
         </div>
     </div>
-    
+
     <div class="col-lg-4 col-md-4 col-sm-4">
         <div class="form-group {{ $errors->has('current_institute') ? 'has-error' : '' }}">
             {!! Form::label('Current Institute:') !!}
             {!! Form::text('current_institute', old('current_institute'), ['class'=>'form-control', 'placeholder'=>'Enter Current Institute']) !!}
             <span class="text-danger">{{ $errors->first('current_institute') }}</span>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="form-group {{ $errors->has('student_gender') ? 'has-error' : '' }}">
+            {!! Form::label('Student Gender:') !!}
+            {{ Form::radio('student_gender', '0' ) }} Male
+            {{ Form::radio('student_gender', '1' ) }} Female
+            <span class="text-danger">{{ $errors->first('student_gender') }}</span>
         </div>
     </div>
 

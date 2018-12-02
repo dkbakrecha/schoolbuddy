@@ -31,6 +31,8 @@ Route::resource('master_class', 'MasterClassController');
 
 Route::resource('academic_enquiries', 'AcademicEnquiryController@make');
 
+Route::resource('cms_content', 'CmsContentController');
+
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');

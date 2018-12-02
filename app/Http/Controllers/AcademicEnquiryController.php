@@ -5,16 +5,16 @@ namespace App\Http\Controllers;
 use App\AcademicEnquries;
 use Illuminate\Http\Request;
 
-class AcademicEnquiryController extends Controller
-{
+class AcademicEnquiryController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        echo "ASd"; exit;
+    public function index() {
+        echo "ASd";
+        exit;
     }
 
     /**
@@ -22,8 +22,7 @@ class AcademicEnquiryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -33,8 +32,7 @@ class AcademicEnquiryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -44,8 +42,7 @@ class AcademicEnquiryController extends Controller
      * @param  \App\AcademicEnquries  $academicEnquries
      * @return \Illuminate\Http\Response
      */
-    public function show(AcademicEnquries $academicEnquries)
-    {
+    public function show(AcademicEnquries $academicEnquries) {
         //
     }
 
@@ -55,8 +52,7 @@ class AcademicEnquiryController extends Controller
      * @param  \App\AcademicEnquries  $academicEnquries
      * @return \Illuminate\Http\Response
      */
-    public function edit(AcademicEnquries $academicEnquries)
-    {
+    public function edit(AcademicEnquries $academicEnquries) {
         //
     }
 
@@ -67,8 +63,7 @@ class AcademicEnquiryController extends Controller
      * @param  \App\AcademicEnquries  $academicEnquries
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AcademicEnquries $academicEnquries)
-    {
+    public function update(Request $request, AcademicEnquries $academicEnquries) {
         //
     }
 
@@ -78,29 +73,32 @@ class AcademicEnquiryController extends Controller
      * @param  \App\AcademicEnquries  $academicEnquries
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AcademicEnquries $academicEnquries)
-    {
+    public function destroy(AcademicEnquries $academicEnquries) {
         //
     }
-    
-    public function make()
-    {
-        return view('front/admission');;
+
+    public function make() {
+        return view('front/admission');
+        ;
     }
-    
-    public function storefront(Request $request)
-    {
-        $this->validate($request,[
+
+    public function storefront(Request $request) {
+        $dateinit = \Carbon\Carbon::parse($request->dateini);
+
+        $this->validate($request, [
             'student_name' => 'required',
             'student_dob' => 'required',
             'current_institute' => 'required',
         ]);
-        $reqData = $request->all();
-        $reqData['enquiry_date'] = date("2015-05-05");
+
+
+        //$reqData = $request->all();
+        //$reqData['enquiry_date'] = $dateinit->format('d/m/Y');
         //print_r($reqData);
         //die();
-        AcademicEnquries::create($request->all());
+        AcademicEnquries::create($request->only('student_name', 'student_dob', 'current_institute'));
 
         return back()->with('success', 'Thanks for admission enquery. We will get back soon!');
     }
+
 }

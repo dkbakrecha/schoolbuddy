@@ -122,6 +122,12 @@ return [
             'icon' => 'file',
             'icon_color' => 'green',
         ],
+        [
+            'text' => 'Site Setting',
+            'url' => 'site_setting',
+            'icon' => 'cog',
+            'icon_color' => 'green',
+        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',

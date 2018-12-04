@@ -32,6 +32,7 @@ Route::resource('master_class', 'MasterClassController');
 Route::resource('academic_enquiries', 'AcademicEnquiryController@make');
 
 Route::resource('cms_content', 'CmsContentController');
+Route::resource('site_setting', 'SiteSettingController');
 
 Auth::routes();
 

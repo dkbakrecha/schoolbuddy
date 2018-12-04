@@ -21,31 +21,9 @@ class CmsContentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function index()
-    {
+     public function index() {
         $content = CmsContent::orderby('id', 'desc')->paginate(5);
         return view('cms_content.index', compact('content'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -96,16 +74,5 @@ class CmsContentController extends Controller
         return redirect()->route('cms_content.show', 
             $content->id)->with('flash_message', 
             'Article, '. $content->title.' updated');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\CmsContent  $cmsContent
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(CmsContent $cmsContent)
-    {
-        //
     }
 }

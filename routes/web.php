@@ -33,9 +33,6 @@ Route::resource('academic_enquiries', 'AcademicEnquiryController@make');
 
 Route::resource('cms_content', 'CmsContentController');
 Route::resource('site_setting', 'SiteSettingController');
-
-Auth::routes();
-
 Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('admission', 'AcademicEnquiryController@make');
@@ -44,6 +41,11 @@ Route::post('admission', ['as'=>'admission.store','uses'=>'AcademicEnquiryContro
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('admin/students', 'StudentController@index');
+    Route::get('admin/notices', 'NoticesController@index');
+});
 
 Route::get('about-us', function () {
     return view('front/aboutus');

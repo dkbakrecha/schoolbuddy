@@ -19,22 +19,32 @@ Auth::routes();
 
 //Route::get('/', 'PostController@index')->name('home');
 
-Route::resource('users', 'UserController');
+Route::resources([
+     'cms_content' => 'UserController',
+     'users' => 'CmsContentController',
+     'roles' => 'RoleController',
+     'permissions' => 'PermissionController',
+     'posts' => 'PostController',
+     'master_class' => 'MasterClassController',
+     'academic_enquiries' => 'AcademicEnquiryController@make',
+    
+    'cms_content' => 'CmsContentController',
+    'site_setting' => 'SiteSettingController',
+    'albums' => 'AlbumsController',
+    'photos' => 'PhotosController'
+]);
 
-Route::resource('roles', 'RoleController');
-
-Route::resource('permissions', 'PermissionController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('master_class', 'MasterClassController');
-
-Route::resource('academic_enquiries', 'AcademicEnquiryController@make');
-
-Route::resource('cms_content', 'CmsContentController');
-Route::resource('site_setting', 'SiteSettingController');
+Route::get('photos/create/{album_id}', 'PhotosController@create');
 
 Auth::routes();
+
+
+
+//Route::post('albums/create', '');
+//Route::get('/albums', 'AlbumsController@index');
+//Route::get('/albums/create', 'AlbumsController@create');
+//Route::post('/albums/store', 'AlbumsController@store');
+
 
 Route::get('home', 'HomeController@index')->name('home');
 

@@ -104,7 +104,7 @@ return [
         ],
         [
             'text' => 'Students',
-            'url' => 'admin/students',
+            'url' => 'admin/studentsList',
             'icon' => 'file',
             'label_color' => 'success',
         ],

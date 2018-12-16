@@ -43,7 +43,8 @@ Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@
 
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('admin/students', 'StudentController@index');
+    Route::get('admin/addstudent', 'StudentController@studentOperations');
+    Route::get('admin/studentsList', 'StudentController@viewGrid');
     Route::get('admin/notices', 'NoticesController@index');
 });
 

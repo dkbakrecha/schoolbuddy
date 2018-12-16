@@ -20,8 +20,11 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function studentOperations()
     {
         return view('student');
+    }
+    public function viewGrid(){
+        return view('student_grid');
     }
 }

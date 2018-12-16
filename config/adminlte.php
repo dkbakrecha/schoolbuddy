@@ -103,6 +103,18 @@ return [
             'label_color' => 'success',
         ],
         [
+            'text' => 'Students',
+            'url' => 'admin/studentsList',
+            'icon' => 'file',
+            'label_color' => 'success',
+        ],
+        [
+            'text' => 'Notices',
+            'url' => 'admin/notices',
+            'icon' => 'file',
+            'label_color' => 'success',
+        ],
+        [
             'text' => 'Articles',
             'url' => 'posts',
             'icon' => 'file',

@@ -79,6 +79,8 @@
         <script src="{{ asset('vendor/business/bootstrap/js/jquery.js') }}"></script>
         <script src="{{ asset('vendor/business/bootstrap/js/bootstrap.min.js') }}"></script>
 
+<!-- <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script> -->
+
     </body>
 
 </html>

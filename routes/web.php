@@ -46,6 +46,7 @@ Auth::routes();
 //Route::post('/albums/store', 'AlbumsController@store');
 
 
+
 Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('admission', 'AcademicEnquiryController@make');
@@ -54,6 +55,12 @@ Route::post('admission', ['as'=>'admission.store','uses'=>'AcademicEnquiryContro
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('admin/addstudent', 'StudentController@studentOperations');
+    Route::get('admin/studentsList', 'StudentController@viewGrid');
+    Route::get('admin/notices', 'NoticesController@index');
+});
 
 Route::get('about-us', function () {
     return view('front/aboutus');

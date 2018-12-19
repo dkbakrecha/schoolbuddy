@@ -35,7 +35,8 @@ Route::resources([
 ]);
 
 Route::get('photos/create/{album_id}', 'PhotosController@create');
-
+Route::get('galleries', 'AlbumsController@galleries');
+Route::get('galleries/info/{album_id}', 'AlbumsController@info');
 Auth::routes();
 
 
@@ -70,6 +71,3 @@ Route::get('events', function () {
     return view('front/events');
 });
 
-Route::get('galleries', function () {
-    return view('front/galleries');
-});

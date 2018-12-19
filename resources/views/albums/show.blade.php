@@ -18,7 +18,7 @@
             <div class="panel panel-default">
                 @foreach($album->photos as $photo)
                 <div class="col-lg-4">
-                    <a href="{{ route('albums.show', $album->id) }}">
+                    <a href="{{ route('photos.show', $photo->id) }}">
                         <img class="thumbnail img-responsive" src="{{ URL::to('/') }}/storage/photos/{{$photo->album_id}}/{{ $photo->photo }}" alt="{{ $photo->title }}">
                     </a>
                     <h4>{{ $photo->title }}</h4>

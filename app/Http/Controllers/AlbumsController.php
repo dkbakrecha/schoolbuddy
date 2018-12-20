@@ -59,7 +59,7 @@ class AlbumsController extends Controller {
         return view('front.galleries')->with('albums', $albums);
     }
 /*
-    public function info($id) {
+    public function info($album_id) {
         $album = Album::with('Photos')->find($id);
         return view('front.galleriesview')->with('album', $album);
     }*/

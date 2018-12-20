@@ -12,7 +12,7 @@
 
 @foreach($albums as $album)
 <div class="col-lg-4">
-    <a href="{{ route('galleries.info', $album->id) }}">
+    <a href="{{ route('gallery_images', $album->id) }}">
         <img class="thumbnail img-responsive" src="storage/album_covers/{{ $album->cover_image }}" alt="{{ $album->cover_image }}">
     </a>
     <h4>{{ $album->name }}</h4>

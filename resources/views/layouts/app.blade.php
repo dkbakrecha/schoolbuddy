@@ -18,7 +18,10 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/modern-business.css') }}" rel="stylesheet">
-
+        
+        <!-- Gallery Overlay -->
+        <link href="{{ asset('css/fresco/fresco.css') }}" rel="stylesheet">
+        
         <link href="{{ asset('css/schoolfront.css') }}" rel="stylesheet">
         <link href="{{ asset('css/school-responsive.css') }}" rel="stylesheet">
         <link href="{{ asset('css/colors.css') }}" rel="stylesheet">
@@ -78,6 +81,9 @@
         <!-- Bootstrap core JavaScript -->
         <script src="{{ asset('vendor/business/bootstrap/js/jquery.js') }}"></script>
         <script src="{{ asset('vendor/business/bootstrap/js/bootstrap.min.js') }}"></script>
+
+        <!-- Gallery Overlay -->
+        <script src="{{ asset('js/fresco/fresco.js') }}"></script>
 
         <script type="text/javascript">
             $('#carouselExampleIndicators').carousel();

@@ -3,11 +3,9 @@
         <footer >
             <div class="row">
                 <div class="col-lg-8">
-
                     <div class="links">
                         <a href="about-us" class="link">About</a>
-                        <a href="contact-us" class="link">About</a>
-                        
+                        <a href="contact-us" class="link">Contact Us</a>
                     </div>
                 </div>
 

@@ -54,19 +54,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
+                <li class="{{ request()->is('about-us') ? 'active' : '' }}">
                     <a href="{{ url('/about-us') }}">About</a>
                 </li>
-                <li>
+                <li class="{{ request()->is('admission') ? 'active' : '' }}">
                     <a href="{{ url('/admission') }}">Admission</a>
                 </li>
-                <li>
+                <li class="{{ request()->is('events') ? 'active' : '' }}">
                     <a href="{{ url('/events') }}">Event</a>
                 </li>
-                <li>
+                <li class="{{ request()->is('galleries') ? 'active' : '' }}">
                     <a href="{{ url('/galleries') }}">Gallery</a>
                 </li>
-                <li>
+                <li class="{{ request()->is('contact-us') ? 'active' : '' }}">
                     <a href="{{ url('/contact-us') }}">Contact</a>
                 </li>
 

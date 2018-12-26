@@ -12,7 +12,10 @@
 
 @foreach($album->photos as $photo)
 <div class="col-lg-4">
-    <a href="{{ route('photos.show', $photo->id) }}">
+    <a href='{{ URL::to('/') }}/storage/photos/{{$photo->album_id}}/{{ $photo->photo }}'
+         class='fresco'
+         data-fresco-group='{{$photo->album_id}}'
+         data-fresco-caption="{{ $photo->title }}">
         <img class="thumbnail img-responsive" src="{{ URL::to('/') }}/storage/photos/{{$photo->album_id}}/{{ $photo->photo }}" alt="{{ $photo->title }}">
     </a>
     <h4>{{ $photo->title }}</h4>

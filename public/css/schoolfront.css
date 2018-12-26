@@ -90,6 +90,19 @@
     background: #FFF;
 }
 
+
+.navbar-nav>li.active {
+    font-weight: 600;
+}
+
+.navbar-nav>li:hover a{
+    color: #2ecc71;
+}
+
+.navbar-nav>li.active a{
+    color: #ee5b54;
+}
+
 .hr-line{
     border-top: 1px solid #e6e6e6;
 }

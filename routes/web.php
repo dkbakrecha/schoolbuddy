@@ -30,16 +30,22 @@ Route::resources([
     
     'cms_content' => 'CmsContentController',
     'site_setting' => 'SiteSettingController',
-    'albums' => 'AlbumsController',
     'photos' => 'PhotosController'
 ]);
 
+Route::resource('albums', 'AlbumsController');
+
 Route::get('photos/create/{album_id}', 'PhotosController@create');
 Route::get('galleries', 'AlbumsController@galleries');
+
+
+Route::get('gallery_images/{album_id}', 'AlbumsController@albums_photos')->name('albums.albums_photos');
+
+//Route::get('albums_photos/{album_id}', 'AlbumsController@albums_photos');
+
 Auth::routes();
 
 
-Route::get('gallery_images', 'AlbumsController@info');
 
 //Route::post('albums/create', '');
 //Route::get('/albums', 'AlbumsController@index');

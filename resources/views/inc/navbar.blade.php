@@ -14,8 +14,8 @@
             <div class="row">
                 <div class="contact-info">
                     <ul class="nav navbar-nav">
-                        <li><i class="fa fa-phone"></i> +91 8559 933 848</li>
-                        <li><i class="fa fa-envelope-o"></i> support@room247.in</li>
+                        <li><i class="fa fa-phone"></i> +91 00011 00011</li>
+                        <li><i class="fa fa-envelope-o"></i> support@schoolbuddy.in</li>
                     </ul>
                 </div>
 
@@ -48,26 +48,26 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images/SBM-Logo.png" class="cms-icon" alt="{{ config('app.name', 'Laravel') }}">  
+                <img src="{{ URL::to('/') }}/images/SBM-Logo.png" class="cms-icon" alt="{{ config('app.name', 'Laravel') }}">  
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="about-us">About</a>
+                    <a href="{{ url('/about-us') }}">About</a>
                 </li>
                 <li>
-                    <a href="admission">Admission</a>
+                    <a href="{{ url('/admission') }}">Admission</a>
                 </li>
                 <li>
-                    <a href="events">Event</a>
+                    <a href="{{ url('/events') }}">Event</a>
                 </li>
                 <li>
-                    <a href="galleries">Gallery</a>
+                    <a href="{{ url('/galleries') }}">Gallery</a>
                 </li>
                 <li>
-                    <a href="contact-us">Contact</a>
+                    <a href="{{ url('/contact-us') }}">Contact</a>
                 </li>
 
                 <!-- Authentication Links -->

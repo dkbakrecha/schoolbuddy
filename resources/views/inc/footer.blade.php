@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright">
-                        Copyright &copy; 2018. <a href="http://classyarea.in/" target="_blank">ClassyAREA.in</a>
+                        Copyright &copy; 2018. <a href="http://classyarea.in/" target="_blank">schoolbuddy.in</a>
                     </div>
                     
                 </div>

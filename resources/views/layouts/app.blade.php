@@ -41,15 +41,15 @@
             <div class="container">
                 <h3>
                     @if (\Request::is('contact-us'))  
-                    <img src="images/lulu/Mail.png" class="cms-icon" alt="">  
+                    <img src="{{ URL::to('/') }}/images/lulu/Mail.png" class="cms-icon" alt="">  
                     @elseif (\Request::is('about-us'))  
-                    <img src="images/lulu/Graph.png" class="cms-icon" alt="">  
+                    <img src="{{ URL::to('/') }}/images/lulu/Graph.png" class="cms-icon" alt="">  
                     @elseif (\Request::is('events'))  
-                    <img src="images/lulu/Trophy.png" class="cms-icon" alt="">  
+                    <img src="{{ URL::to('/') }}/images/lulu/Trophy.png" class="cms-icon" alt="">  
                     @elseif (\Request::is('galleries'))  
-                    <img src="images/lulu/Camera.png" class="cms-icon" alt="">  
+                    <img src="{{ URL::to('/') }}/images/lulu/Camera.png" class="cms-icon" alt="">  
                     @elseif (\Request::is('admission'))  
-                    <img src="images/lulu/Pencil.png" class="cms-icon" alt="">  
+                    <img src="{{ URL::to('/') }}/images/lulu/Pencil.png" class="cms-icon" alt="">  
                     @endif
 
                     @yield('page-title')
@@ -79,6 +79,10 @@
         <script src="{{ asset('vendor/business/bootstrap/js/jquery.js') }}"></script>
         <script src="{{ asset('vendor/business/bootstrap/js/bootstrap.min.js') }}"></script>
 
+        <script type="text/javascript">
+            $('#carouselExampleIndicators').carousel();
+
+            </script>
 <!-- <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script> -->
 
     </body>

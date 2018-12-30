@@ -49,7 +49,7 @@
                     <img src="{{ URL::to('/') }}/images/lulu/Graph.png" class="cms-icon" alt="">  
                     @elseif (\Request::is('events'))  
                     <img src="{{ URL::to('/') }}/images/lulu/Trophy.png" class="cms-icon" alt="">  
-                    @elseif (\Request::is('galleries'))  
+                    @elseif (\Request::is('galleries') || \Request::is('gallery_images*'))  
                     <img src="{{ URL::to('/') }}/images/lulu/Camera.png" class="cms-icon" alt="">  
                     @elseif (\Request::is('admission'))  
                     <img src="{{ URL::to('/') }}/images/lulu/Pencil.png" class="cms-icon" alt="">  

@@ -63,7 +63,7 @@
                 <li class="{{ request()->is('events') ? 'active' : '' }}">
                     <a href="{{ url('/events') }}">Event</a>
                 </li>
-                <li class="{{ request()->is('galleries') ? 'active' : '' }}">
+                <li class="{{ request()->is('galleries') || request()->is('gallery_images*') ? 'active' : '' }}">
                     <a href="{{ url('/galleries') }}">Gallery</a>
                 </li>
                 <li class="{{ request()->is('contact-us') ? 'active' : '' }}">

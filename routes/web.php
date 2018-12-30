@@ -26,7 +26,7 @@ Route::resources([
      'permissions' => 'PermissionController',
      'posts' => 'PostController',
      'master_class' => 'MasterClassController',
-     'academic_enquiries' => 'AcademicEnquiryController@make',
+     'academic_enquiries' => 'AcademicEnquiryController',
     
     'cms_content' => 'CmsContentController',
     'site_setting' => 'SiteSettingController',

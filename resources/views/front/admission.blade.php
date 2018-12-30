@@ -44,15 +44,67 @@
         <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="form-group {{ $errors->has('student_gender') ? 'has-error' : '' }}">
                 {!! Form::label('Student Gender:') !!}
-                {{ Form::radio('student_gender', '0' ) }} Male
-                {{ Form::radio('student_gender', '1' ) }} Female
+                <div>
+                    {!! Form::radio('student_gender', '0' ) !!} Male
+                    {!! Form::radio('student_gender', '1' ) !!} Female
+                </div>
                 <span class="text-danger">{{ $errors->first('student_gender') }}</span>
             </div>
         </div>
 
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="form-group {{ $errors->has('class_id') ? 'has-error' : '' }}">
+                {!! Form::label('Student Class:') !!}
+                {!! Form::select('class_id', array('1' => 'First', '2' => 'Second'),null,['class'=>'form-control', 'placeholder' => 'Select class for admission']) !!} 
+                <span class="text-danger">{{ $errors->first('class_id') }}</span>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="form-group {{ $errors->has('father_name') ? 'has-error' : '' }}">
+                {!! Form::label('Father Name:') !!}
+                {!! Form::text('father_name', old('father_name'), ['class'=>'form-control', 'placeholder'=>'Enter Father Name Institute']) !!}
+                <span class="text-danger">{{ $errors->first('father_name') }}</span>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="form-group {{ $errors->has('mother_name') ? 'has-error' : '' }}">
+                {!! Form::label('Mother Name:') !!}
+                {!! Form::text('mother_name', old('mother_name'), ['class'=>'form-control', 'placeholder'=>'Enter Mother Name Institute']) !!}
+                <span class="text-danger">{{ $errors->first('mother_name') }}</span>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                {!! Form::label('Email Address:') !!}
+                {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter email address']) !!}
+                <span class="text-danger">{{ $errors->first('email') }}</span>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="form-group {{ $errors->has('contact_number') ? 'has-error' : '' }}">
+                {!! Form::label('Contact Number:') !!}
+                {!! Form::text('contact_number', old('contact_number'), ['class'=>'form-control', 'placeholder'=>'Enter contact number']) !!}
+                <span class="text-danger">{{ $errors->first('contact_number') }}</span>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="form-group {{ $errors->has('Remark') ? 'has-error' : '' }}">
+                {!! Form::label('Remark:') !!}
+                {!! Form::text('Remark', old('Remark'), ['class'=>'form-control', 'placeholder'=>'Enter Remark']) !!}
+                <span class="text-danger">{{ $errors->first('Remark') }}</span>
+            </div>
+        </div>
+
+
+
         <div class="col-lg-12 mb-12">
             <div class="form-group">
-                <button class="btn btn-success">Contact US!</button>
+                <button class="btn btn-success">Request Enquiry</button>
             </div>
         </div>
 

@@ -11,6 +11,7 @@ class AcademicEnquries extends Model
         'student_gender',
         'student_dob',
         'class_id',
-        'current_institute'
+        'current_institute',
+        'enquiry_source', 'father_name', 'mother_name', 'email', 'contact_number', 'Remark'
     ];
 }

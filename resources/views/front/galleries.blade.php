@@ -9,7 +9,7 @@
     {{ Session::get('success') }}
 </div>
 @endif
-
+<div class="col-lg-10 col-lg-offset-1">
 @foreach($albums as $album)
 <div class="col-lg-4">
     <a href="{{ route('albums.albums_photos', ['album_id' => $album->id] ) }}">
@@ -18,5 +18,5 @@
     <h4>{{ $album->name }}</h4>
 </div>
 @endforeach
-
+</div>
 @stop
